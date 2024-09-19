@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body{
+            display:flex;
+            align-items:center;
+            flex-direction: column;
+            margin:0;
+        }
+        .main-container{
+            width:400px;
+            height:auto;
+            border:2px solid red;
+            padding:7px 15px 30px 15px;
+            box-sizing: border-box;
+            background-color:black;
+        }
+        .heading{
+            display:flex;
+            justify-content:center;
+            color:white;
+            margin-top:0px;
+        }
+        .fname,.lname,.mailid,.contactno,.date,.userid,.cpassword,.lpassword{
+            height:40px;
+            width:100%;
+            box-sizing: border-box;
+            margin-bottom:20px;
+            font-family:arial;
+            font-size:17px;
+        }
+        .upload-field{
+            display:none;
+        }
+        .upload-button-container{
+            display:flex;
+            justify-content:space-between;
+            height:40px;
+            width:100%;
+        }
+        .upload-button,.submit-button{
+            height:100%;
+            width:45%;
+            border:none;
+            background-color:red;
+            color:white;
+            font-family:arial;
+            font-size:18px;
+        }
+
+    </style>
+</head>
+<body>
+    <form class="main-container">
+        <div class="heading"><h1>SignUp</h1></div>
+        <input type="text" class="fname" name="fname" placeholder="Edit First Name" required>
+        <input type="text" class="lname" name="lname" placeholder="Edit Last Name" required>
+        <input type="date" class="date" name="date" required>
+        <input type="text" class="userid" name="userid" placeholder="Enter 4to8 letter" required>
+        <input type="text" class="mailid" name="mailid" placeholder="Edit mailid" required>
+        <input type="text" class="contactno" name="contactno" placeholder="Edit contactno" required>
+        <input type="password" class="cpassword" name="cpassword" placeholder="Create Password" required>
+        <input type="password" class="lpassword" name="lpassword" placeholder="Confirm Password" required>
+        <input type="file" class="upload-field" name="image">
+        <div class="upload-button-container">
+            <input type="submit" class="submit-button" value="Create Account">
+            <button class="upload-button">Upload Image</button>
+        </div>
+    </form>
+</body>
+<script>
+    const originalupload = document.querySelector('.upload-field');
+    const pseudoupload = document.querySelector('.upload-button');
+    pseudoupload.addEventListener('click',function(){
+        originalupload.click();
+    });
+</script>
+</html>
