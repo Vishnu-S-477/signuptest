@@ -106,20 +106,28 @@
     </style>
 </head>
 <body>
-    <form class="main-container">
+    <form class="main-container" action = "../backend_authentication/backendsignup.php" method = "post" enctype="multipart/form-data">
         <div class="heading"><h1>SignUp</h1></div>
-        <input type="text" class="fname" name="fname" placeholder="Edit First Name" required>
-        <input type="text" class="lname" name="lname" placeholder="Edit Last Name" required>
-        <input type="date" class="date" name="date" required>
-        <input type="text" class="userid" name="userid" placeholder="Enter 4to8 letter" required>
-        <input type="text" class="mailid" name="mailid" placeholder="Edit mailid" required>
-        <input type="text" class="contactno" name="contactno" placeholder="Edit contactno" required>
-        <input type="password" class="cpassword" name="cpassword" placeholder="Create Password" required>
-        <input type="password" class="lpassword" name="lpassword" placeholder="Confirm Password" required>
+        <input type="text" class="fname" name="First_Name"  placeholder="First Name" required>
+        <input type="text" class="lname" name="Last_Name"  placeholder="Last Name" required>
+        <input type="date" class="date" name="Date-of-Birth" required>
+        <input type="text" class="userid" name="userid"  placeholder="Enter 4to8 letter" required>
+        
+        <input type="text" class="mailid" name="Email_Id"  placeholder="mailid" required>
+       
+        <input type="text" class="contactno" name="Phone_Number"  pattern="[0-9]{10}"  placeholder="contactno" required>
+        
+        <input type="password" class="cpassword" name="Create_Password" placeholder="Create Password" required>
+        <input type="password" class="lpassword" name="Confirm_Password" placeholder="Confirm Password" required>
+       
         <input type="file" class="upload-field" name="image">
         <div class="upload-button-container">
+            <button type="button" class="upload-button">Upload Image</button>
+        </div>
+        <div class="response-button-container">
+            <button type="button" class="login-link">Login</button>
             <input type="submit" class="submit-button" value="Create Account">
-            <button class="upload-button">Upload Image</button>
+            
         </div>
     </form>
 </body>
